@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+.jumbotron{
+	background-image:url("../img/men-2425121_1280.jpg");
+	height:500px;
+	
+}
+.jumbotron_text{
+	padding-top:3%;
+	padding-right:10%;
+	font-size:40px;
+	float:right;
+	
+}
+.detail_text{
+	color:#99004C;
+	font-weight:bold;
+	font-size:30px;
+	margin-bottom:20px;
+	
+}
+.detail_text2{
+	color:#99004C;
+	font-weight:bold;
+	font-size:20px;
+	margin-bottom:100px;
+	
+}
+.container{
+
+
+	
+	width:1000px;
+	height:1200px;
+	margin-bottom:50px;
+}
+.row{
+	margin-right:3%;
+	margin-left:3%;
+	
+}
+.studyinpobox{
+
+	width:900px;
+	margin-top:50px;
+	height:300px;
+	
+	
+}
+.leaderbox{
+
+	width:900px;
+	height:300px;
+	margin-top:50px;
+	
+}
+.studentbox{
+	
+	width:900px;
+	height:300px;
+	margin-top:50px;
+}
+.student_tables{
+	margin-top:100px;
+	margin-left:100px;
+	
+}
+a:link { color: #99004C; text-decoration: none;}
+ a:visited { color: #99004C; text-decoration: none;}
+ a:hover { color: #99004C; text-decoration: underline;}
+
+
+

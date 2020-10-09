@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+td {
+	text-align: center;
+	width: 100px;
+	height: 60px;
+}
+
+tr {
+	font-weight: bold;
+}
+
+.supply_btn {
+	color: white;
+	font-weight: bold;
+	background-color: #99004C;
+	border-radius: 50px;
+	width: 70px;
+	height: 70px;
+	
+}

@@ -1,0 +1,340 @@
+@charset "UTF-8";
+
+.enter{
+	padding-right:15%;
+}
+
+.enter a{
+   color:white;
+   text-decoration: none;
+   margin-right: :30px;
+   margin-left: 30px;
+   font-weight: bold;
+
+}
+
+ .navbar-nav > li
+
+
+ {
+
+  padding-left:30px;
+
+  padding-right:30px;
+
+  
+ }
+
+ .brand-logo{
+ 	color:white;
+ }
+
+
+li{
+	list-style: none  
+}
+
+
+
+
+
+
+.jumbotron{
+	background-image: url('../img/people-2557396_1920.jpg');
+    background-size: cover;
+    font-color: white;
+    text-shadow: black 0.2em 0.2em 0.2em;
+    padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
+.jumbotron-register{
+	background-image: url('../img/')
+	
+}
+
+
+
+
+
+
+.serchcrew{
+	
+	background-color:#ebebeb;
+
+	height: 900px;
+	
+
+	
+
+}
+.leader{
+   background-color:#ebebeb;
+   height: 600px;
+
+}
+
+.review{
+  background-color: white;
+  
+  height: 700px;
+}
+
+
+.crewslot{
+	border: :1px,solid,white;
+	width: 400px;
+	height: 450px;
+	background-color: white;
+	border:white;
+	display: inline-block;
+	
+	margin: 20px;
+
+
+ 
+}
+
+.serchcrewboard {
+	background-color:#ebebeb;
+	
+	height: 200px;
+
+}
+
+
+}
+.crewslotbox{
+	
+
+}
+.crewslotbox input{
+ margin-left: 10px;
+}
+.c{
+  text-align: center;
+}
+
+.photo{
+	
+	width: 200px;
+	height: 200px;
+	margin-left: 25%;
+	margin-top:25%;
+
+
+
+}
+
+.studyimpo{
+	
+	width:400px;
+	height:100px;
+	margin-top : 10%;
+}
+
+.serchcrewboard-text{
+ color:black;
+text-align: center;
+padding-top: 3%;
+font-size: 20px;
+display: block;
+
+
+
+
+}
+
+
+ .btn-serchcrewboard{
+     background-color: #99004C;
+     width: 100px;
+     height: 50px;
+     border:white;
+     color:white;
+     margin-top:0%;
+
+ }
+ .board-box{
+ 	float: right;
+ 	margin-right:20%;
+ }
+ 
+ 
+ .reviewbutton{
+ 	margin-top:0%;
+ 	margin-right:20%;
+ 	float:right; 
+ }
+ .review-text{
+ 	padding-top:3%;
+ 	text-align: center;
+
+ }
+ .review-text p{
+   margin-top: 5%;
+   font-size: 20px;
+ 	
+ }
+ .table{
+ 	margin-top: 10%;
+ 	margin-left:23%;
+ }
+ .table td{
+ 	width: 200px;
+ 	height: 50px;
+ 	
+ }
+ .leader-box{
+	float: right;
+	padding-right:19%;
+	margin-top: 50px;
+
+}
+
+ .leader-button{
+    background-color: #99004C;
+     width: 100px;
+     height: 50px;
+     border:white;
+     color:white;
+     margin-right: 10px;
+    float: right;
+ }
+
+.leader-text{
+	
+	padding-top: 3%;
+	font-size: 30px;
+	 font-weight: bold;
+
+}
+.leader-text p{
+	margin-left: 10%;
+	font-size: 40px;
+}
+.leader-content{
+	display: inline-flex;
+	padding-right:30%;
+	
+
+}
+.leader-content-text{
+	float: right;
+	font-size: 25px;
+	width:400px;
+	height:300px;
+	text-align: center;
+	padding-top: 70px;
+	padding-left: 150px;
+
+
+}
+.leader-content-text p{
+	padding-left: 30px;
+	width: 500px;
+}
+
+.leader-content-picture{
+	float: left;
+	width: 500px;
+	background-image: url(../img/leader.jpg);
+	 border-radius: 70%;
+
+}
+.leader-button-box{
+	float: right;
+
+}
+.policy-content a{
+	color:white;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ footer{
+ 
+ padding-bottom:0px ; 
+  background-color: #99004C;
+  height: 600px;
+
+
+}
+
+
+.footer-content{
+	
+	width: 1000px;
+    height: 450px;
+    padding: 3%;
+    margin-left: 20%;
+
+}
+.footer-logo{
+   
+    width: 100px;
+    height: 100px;
+    float: left;
+    display: inline-block;
+
+}
+.policy{
+ 
+   width: 300px;
+    height: 300px;
+    display: inline-block;
+    margin-left: 70px;
+
+
+
+}
+.customer-center{
+
+     float: right;
+     width: 300px;
+    height: 300px;
+    display: inline-block;
+
+}
+.customer-center-content{
+  text-align: center;
+  margin-top: 20%;
+ }
+.policy-content{
+  text-align: center;
+  margin-top: 20%;
+   line-height: 500%;
+}
+.customer-center-content a{
+   color:white;
+   font-weight: bold;
+   line-height: 500%;
+}
+.name {
+	color: white;
+	font-weight: bold;
+	font-size:30px;	
+	
+	
+    
+}

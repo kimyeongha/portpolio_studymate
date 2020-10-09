@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="project.port.mapper.StudyMapper">
+  
+    <insert id="insert" >
+		insert into studyimpo
+		(local,cost,quota,subject,content,leader,studyname,level,email)values(#{local},#{cost},#{quota},#{subject},#{content},#{leader},#{studyname},#{level},#{email})  <!-- insertR에서 
+			매개변수로boardVo를 보내주는데 거기의 데이터와 이름이 같아야한다. -->
+	</insert>
+	
+	<select id="leaderlimit" resultType="Integer">
+         select count(*)
+      from studyimpo
+      where email=#{email}
+  </select>
+
+  <select id="studyno" resultType="Integer">
+      select max(studyno)
+      from studyimpo   
+  </select>  
+
+  </mapper>

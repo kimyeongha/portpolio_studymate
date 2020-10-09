@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="project.port.mapper.DetailMapper">
+
+     <select id="forstudentList" resultType="project.port.domain.StudyVO">
+         select *
+         from studymemberinpo
+         where email=#{email}
+     
+     </select>
+     
+     <select id="forLeaderList" resultType="project.port.domain.MemberForLeaderVO">
+         select *
+         from studymemberinpo
+         where leaderemail=#{email}
+     
+     </select>
+      
+      <select id="studyInfoList" resultType="project.port.domain.StudyVO">
+         select *
+         from studyimpo
+         where email=#{email}
+      
+      </select>
+      
+      <select id="leaderAutho" resultType="Int">
+        select count(*)
+        from studyimpo
+        where email=#{email} and studyno=#{studyno} 
+      </select>
+       <select id="modifyAutho" resultType="Int">
+        select count(*)
+        from studyimpo
+        where email=#{email} and studyno=#{studyno} 
+      </select>
+        
+        <select id="reviewAutho" resultType="Int">
+        select count(*)
+        from studymemberinpo
+        where email=#{email} and studyno=#{studyno} 
+      </select>
+      
+      
+      
+      <delete id="studentdelete">
+          delete 
+          from studymemberinpo
+          where studyno=#{studyno} and email=#{email}
+      
+      </delete>
+      
+       <delete id="leaderdelete">
+          delete 
+          from studymemberinpo
+          where studyno=#{studyno} and email=#{email}
+      
+      </delete>
+      
+        
+      <select id="studyModifyList" resultType="project.port.domain.StudyVO">
+           select *
+           from studyimpo
+          where studyno=#{studyno}  
+          
+      </select>
+     
+     
+    
+        <update id="studyModify">
+         update  studyimpo set local=#{local}, cost=#{cost} , quota = #{quota} , subject = #{subject} , content = #{content} , studyname =#{studyname} , level= #{level}
+            where studyno=#{studyno}
+        
+      </update>
+      
+       <update id="studyModifyAttach">
+         update tbl_attach 
+         set uuid=#{uuid} , uploadPath =#{uploadPath} ,fileName= #{fileName}  
+         where studyno =#{studyno}
+         
+         
+      </update>
+      
+      <delete id="studydelete">
+          delete
+           from studyimpo
+           where studyno=#{studyno}
+        <!--  스터디 삭제 되면 외래키로 인해서 Attach도 자동삭제  -->
+      </delete>
+       <!-- 스터디 삭제되면 그 스터디 듣고 있는 맴버도 다 삭제하기 위해서 -->
+      <delete id="studydeleteTomember">
+          delete 
+          from studymemberinpo
+          where studyno=#{studyno};
+        </delete>
+        
+        <insert id="review">
+          insert into 
+        review(leader,writer,level,content,score,subject,studyno,studyname)
+        values(#{leader},#{writer},#{level},#{content},#{score},#{subject},#{studyno},#{studyname});
+            
+        
+        </insert>
+      
+  
+
+ </mapper>

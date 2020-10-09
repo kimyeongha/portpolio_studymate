@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="project.port.mapper.StudyAttachMapper">  
+      <insert id="insert">
+           insert into tbl_attach(uuid,uploadpath,filename,studyno) 
+           values(#{uuid},#{uploadPath},#{fileName},#{studyno})     
+      
+      
+      </insert>
+      
+      <delete id="delete">
+     delete from tbl_attach
+     where uuid=#{uuid}        
+        
+      
+      </delete>
+      <select id="showAttach" resultType="project.port.domain.StudyAttachVO">
+           select *
+           from tbl_attach
+           where studyno=#{studyno}
+      
+      </select>
+      
+      <select id="getOldFiles"  resultType="project.port.domain.StudyAttachVO">
+            select *
+            from tbl_attach
+            where uploadpath = to char 
+            
+      
+      </select>
+      
+  </mapper>

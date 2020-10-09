@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="project.port.mapper.StudyBoardMapper">  
+    
+
+        <select id="list" resultType="project.port.domain.StudyVO">
+    <![CDATA[   
+		select studyno,local,cost,quota,subject,content,leader,studyname,level,email,uuid,fileName,uploadPath
+		from(
+		select @rownum:=@rownum+1 as rownum,studyimpo.*,tbl_attach.uuid,tbl_attach.fileName,tbl_attach.uploadPath
+		from(select @rownum:=0) as tmp, tbl_attach ,studyimpo
+		 where tbl_attach.studyno = studyimpo.studyno
+		
+			
+			     ]]>
+		   
+			order by studyno desc
+			)boardlist2
+			 <![CDATA[   
+			where rownum >(#{pageNum}-1)*#{amount} and rownum <= #{pageNum}*#{amount}  
+                ]]>
+	</select>
+  
+     
+        <select id="listSubject" resultType="project.port.domain.StudyVO">
+    <![CDATA[   
+		select *
+		from(
+	select @rownum:=@rownum+1 as rownum,studyimpo.*,tbl_attach.uuid,tbl_attach.fileName,tbl_attach.uploadPath
+		from(select @rownum:=0) as tmp, tbl_attach ,studyimpo
+	 where tbl_attach.studyno = studyimpo.studyno and subject = #{subject}
+			
+			     ]]>
+			     	order by studyno desc
+			     		)boardlist1
+			     		 <![CDATA[   
+			where rownum >(#{pageNum}-1)*#{amount} and rownum <= #{pageNum}*#{amount}  
+                ]]>
+		
+		    </select>
+     
+
+     
+    <select id="studytotalForMain" resultType="Integer">
+      select count(studyno)
+      from studyimpo
+      
+    
+    
+    </select>
+     <select id="studytotalForSubject" resultType="Integer">
+      select count(studyno)
+      from studyimpo
+      where subject=#{subject}
+      
+   
+   </select>
+    
+    <select id="quotaCount" resultType="Integer">
+          select count(email)
+          from studymemberinpo
+          where studyno=#{studyno}
+    </select>
+    
+    <update id="addStudyCnt">
+        update register_member set studyCnt = studyCnt+1;
+    
+    </update>
+   
+
+  
+
+
+    <select id="studyCnt" resultType="Integer">
+      select count(*)
+      from studymemberinpo
+      where email=#{email}
+      </select>
+      
+      
+        <insert id="reply" >
+        insert studymemberinpo
+                (studyno,name,email,studyname,subject,level,leader,local,quota,content,leaderemail)
+      values(#{studyno},#{name},#{email},#{studyname},#{subject},#{level},#{leader},#{local},#{quota},#{content},#{leaderemail})
+      
+   
+   </insert>
+  </mapper>
